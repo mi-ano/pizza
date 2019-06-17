@@ -148,4 +148,8 @@ $(document).ready(function(event) {
     $("#pod").append("<ul><li>" + deliveryDetails + "</li></ul>");
     $("order-number" ).val("");
   });
-  
+  $('#CheckOut').click(function() {
+    alert("thank you! Rymi's pizza got you");
+    location.reload();
+  });
+});
