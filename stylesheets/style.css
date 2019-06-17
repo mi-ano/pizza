@@ -226,7 +226,10 @@ home section styling
     background: #fac564;
     color: #fff;
 }
-
+.img-fluid {
+    max-width: 100%;
+    height: auto; 
+}
 
 
 
