@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie-edge"/>
+        <link rel="stylesheet" href="stylesheets/bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="stylesheets/style.css">       
+        <title>Pizza Place</title>
+    </head>
+
+    <body>
+
+        <!--start of navigation bar-->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark bar-light">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">Rymi`s</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bar-items" aria-controls="bar-items" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+                <div class="collapse navbar-collapse" id="bar-items">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item active"><a href="#" class="nav-link">Menu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="order-content">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row" id="order-dits">
+                    <div class="col-4">
+                        <div class="card" id="card1">
+                            <div class="card-header">
+                                <h4>Order:</h4>
+                            </div>
+                            <div class="card-body">
+                                <form id="pizza-form" name="pizza-form">
+                                    <div class="form-group">
+                                        <label>Pizza Type</label>
+                                        <select name="Pizza Type" id="Type" class="form-control" required>
+                                            <option></option>
+                                            <option value="Hawaian">Hawaian</option>
+                                            <option value="Peri-Peri Chicken">Per-Peri Chicken</option>
+                                            <option value="BBQ stake">BBQ Stake</option>
+                                            <option value="Chiken Tikka">Chicken Tikka</option>
+                                        </select> 
+                                        <label>Pizza Size</label>
+                                        <select name="Pizza Size" id="Size" class="form-control" required>
+                                            <option></option>
+                                            <option value="Small">Small</option>
+                                            <option value="Medium">Medium</option>
+                                            <option value="Large">Large</option>
+                                        </select>
+                                        <label>Crust</label>
+                                        <select name="Crust" id="Crust" class="form-control" required>
+                                            <option></option>
+                                            <option value="Gluten Free">Gluten Free</option>
+                                            <option value="Crispy">Crispy</option>
+                                            <option value="Stuffed">Stuffed</option>
+                                        </select>
+                                        <input type="submit" name="Place order" class="btn btn-primary p-3 px-xl-4 py-xl-3" id="submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" id="card2">
+                            <div class="card-header">
+                                <h4>Toppings</h4>
+                            </div>
+                            <div class="card-body">
+                                <button type="btn" class="btn btn-primary side-option p-3 px-xl-4 py-xl-3" id="Mushrooms">Mushrooms</button><br>
+                                <button type="btn" class="btn btn-primary side-option p-3 px-xl-4 py-xl-3" id="Pepperoni">Pepperoni</button><br>
+                                <button type="btn" class="btn btn-primary side-option p-3 px-xl-4 py-xl-3" id="Cheese">Cheese</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" id="card2">
+                            <div class="card-header">
+                                <h4>Cost</h4>
+                            </div>
+                            <div class="card-body">
+                                <h2>Price:<span id="final-cost"></span></h2>
+                                <div id="order-details">
+                                    <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
+                                    <ul id="pizza-details"></ul>
+                                    <p><a id="sides-dropdown">Topings</a></p>
+                                    <ul id="sides-details"></ul>
+                                </div>
+                                <button type="btn" class="btn btn-primary side-option p-3 px-xl-4 py-xl-3" id="Order">Order</button><br>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+                <div class="row" id="order-dits2">
+                    <div class="col-4">
+                        <div class="card" id="card1">
+                            <div class="card-header">
+                                <h4>Order:</h4>
+                            </div>
+                            <div class="card-body">
+                                <form id="pizza-number">
+                                    <div class="form-group">
+                                        <form id="pizza-number" name="pizza-form">
+                                            <div class="form-group">
+                                                <label>how many pizza's</label>
+                                                <input type="number" class="form-control" id="order-number">
+                                                <input type="submit" name="Place order" class="btn btn-primary p-3 px-xl-4 py-xl-3" id="submit">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" id="card2">
+                            <div class="card-header">
+                                <h4>Pick or Drop</h4>
+                            </div>
+                            <div class="card-body">
+                                <button type="btn" class="btn btn-primary side-option p-3 px-xl-4 py-xl-3" id="Pick-up">Pick Up</button><br>
+                                <button type="btn" class="btn btn-primary side-option p-3 px-xl-4 py-xl-3" id="Delivery">Delivery</button><br>
+                                <form id="delivery-dits">
+                                    <input type="text" class="form-control" placeholder="Name" id="Name">
+                                    <input type="text" class="form-control" placeholder="Town" id="Town">
+                                    <input type="text" class="form-control" placeholder="Address" id="Address">
+                                    <input type="submit" name="Place order" class="btn btn-primary p-3 px-xl-4 py-xl-3" id="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" id="card2">
+                            <div class="card-header">
+                                <h4>Report</h4>
+                            </div>
+                            <div class="card-body">
+                                <h2>Price:<span id="total-cost"></span></h2>
+                                <div id="order-details">
+                                    <p><a id="pizza-details-dropdown">Number of pizza's</a></p>
+                                    <ul id="no"></ul>
+                                    <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
+                                    <ul id="pizza-details-complete"></ul>
+                                    <p><a id="sides-dropdown">Topings</a></p>
+                                    <ul id="sides-details-complete"></ul>
+                                    <p><a id="sides-dropdown">Pick up Or Delivery</a></p>
+                                    <ul id="pod"></ul>
+                                </div>
+                                <button type="btn" class="btn btn-primary side-option p-3 px-xl-4 py-xl-3" id="CheckOut">Confirm and CheckOut</button><br>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+        </section>
+
+        <script src="javascripts/jquey-3.4.1.js"></script>
+        <script src="stylesheets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        <script src="javascripts/app.js"></script>
+    </body>
+</html>
