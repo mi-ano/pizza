@@ -19,6 +19,9 @@ This program can only be accessed on a computer with Git and Atom/Visual Studio 
 * JAVSCRIPT
 * J QUERY
 
+### BDD
+When you visit the page there are only two pages the home and menu.Click the menu page where you order the type of pizza you want and then submit if you want any toppings you choose and then order where another section appears wher you choose either pick-up or delivery.When clicking the delivery you are requested to enter your address and it comes with an extra fee.  
+
 ### Bugs
 I haven't come across any bugs but if you see one please feel free to contact me
 
