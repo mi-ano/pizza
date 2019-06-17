@@ -3,7 +3,7 @@
 ### By Ryan Miano
 
 ### Description
-pizza order
+ A web application where your customers order different sizes of pizzas with one or more toppings and an option if you want it to be delivered to your house or you come and pick it up. 
 
 
 ### Setup Installations
